@@ -7,21 +7,21 @@
 git clone https://github.com/zsevic/ts-express-starter
 cd ts-express-starter
 cp .env.sample .env # change values after copying
-yarn
-yarn dev
+npm i
+npm run dev
 ```
 
 ### :construction_worker: Build
 
 ```bash
-yarn build
-yarn start
+npm run build
+npm start
 ```
 
 ### :rotating_light: Testing
 
 ```bash
-yarn test
+npm test
 ```
 
 ### :arrow_right: Usage

@@ -13,17 +13,9 @@ export async function connectToDatabase() {
     mongoose.createConnection(constants.MONGODB_URL);
   }
 
-  mongoose.connection
-    .once(
-      'open',
-      (): void => {
-        console.log('Connection with database is established');
-      },
-    )
-    .on(
-      'error',
-      (e: Error): Error => {
-        throw e;
-      },
-    );
+  mongoose.connection.once('open', (): void => {
+    console.log('Connection with database is established');
+  }).on('error', (e: Error): Error => {
+    throw e;
+  });
 }
