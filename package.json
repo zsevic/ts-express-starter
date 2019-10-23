@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "NODE_PATH=./src nodemon --exec ts-node src",
+    "dev": "NODE_PATH=./src ts-node-dev src",
     "lint": "eslint src --ext ts",
     "lint-fix": "eslint src --ext ts --fix",
     "start": "NODE_PATH=./dist/src node dist/src",
@@ -18,10 +18,12 @@
     "@hapi/joi": "^16.1.7",
     "@shelf/jest-mongodb": "^1.1.2",
     "body-parser": "^1.18.3",
+    "compression": "^1.7.4",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.17.1",
     "express-joi-validation": "^4.0.1",
+    "helmet": "^3.21.2",
     "joi": "^14.3.1",
     "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
@@ -44,10 +46,9 @@
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.2.1",
     "jest": "^24.9.0",
-    "nodemon": "^1.19.4",
     "supertest": "^4.0.2",
     "ts-jest": "^24.1.0",
-    "ts-node": "^8.4.1",
+    "ts-node-dev": "^1.0.0-pre.43",
     "typescript": "^3.6.4"
   }
 }
