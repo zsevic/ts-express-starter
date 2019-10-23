@@ -6,7 +6,7 @@ export default (app) => {
   app.get('/', (req, res) => {
     res.send('Hello world');
   });
-  app.use('/docs', swaggerUi.serve, swaggerUi.setup(specs));
+  app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(specs));
 
   app.use('/api/custom', customRoutes);
 };

@@ -4,7 +4,7 @@ import registerRoutes from './routes';
 
 const app = express();
 
-registerRoutes(app);
 registerMiddlewares(app);
+registerRoutes(app);
 
 export default app;

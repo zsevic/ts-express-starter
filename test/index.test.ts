@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import supertest from 'supertest';
-import app from 'api/server';
+import app from 'api';
 import constants from 'config/constants';
 
 const request = supertest(app);

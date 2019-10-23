@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "NODE_PATH=./src nodemon --exec ts-node src/app.ts",
+    "dev": "NODE_PATH=./src nodemon --exec ts-node src",
     "lint": "eslint src --ext ts",
     "lint-fix": "eslint src --ext ts --fix",
-    "start": "NODE_PATH=./dist/src node dist/app.js",
+    "start": "NODE_PATH=./dist/src node dist/src",
     "test": "jest -c test/jest.config.js"
   },
   "keywords": [],

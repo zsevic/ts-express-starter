@@ -1,17 +1,18 @@
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "dist/src",
-    "sourceMap": true,
+    "baseUrl": "src",
     "esModuleInterop": true,
-    "baseUrl": "./src",
+    "module": "commonjs",
+    "outDir": "dist",
     "paths": {
       "root/*": ["../*"]
     },
     "resolveJsonModule": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "target": "es6",
     "types": ["node", "jest"]
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "include": ["src/**/*.ts", "package.json"]
 }
