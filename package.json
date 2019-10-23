@@ -15,11 +15,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@hapi/joi": "^16.1.7",
     "@shelf/jest-mongodb": "^1.1.2",
     "body-parser": "^1.18.3",
     "cors": "^2.8.5",
     "dotenv": "^7.0.0",
     "express": "^4.17.1",
+    "express-joi-validation": "^4.0.1",
+    "joi": "^14.3.1",
     "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
     "swagger-jsdoc": "^3.4.0",
@@ -28,6 +31,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.1",
+    "@types/hapi__joi": "^16.0.2",
     "@types/jest": "^24.0.19",
     "@types/node": "^12.11.1",
     "@types/supertest": "^2.0.8",
