@@ -1,6 +1,7 @@
 import { Router } from 'express';
+import { validationMiddleware } from 'api/middlewares';
 import * as customController from './controller';
-import { customQuery } from './validation';
+import { customQuery as customValidation } from './validation';
 
 const routes = Router();
 
@@ -25,6 +26,6 @@ const routes = Router();
  *              application/json
  */
 
-routes.get('/', customQuery, customController.getCustomListHandler);
+routes.get('/', customValidation, validationMiddleware, customController.getCustomListHandler);
 
 export default routes;
