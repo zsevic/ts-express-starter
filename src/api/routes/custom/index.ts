@@ -1,9 +1,7 @@
 import { Router } from 'express';
-import validate from 'express-joi-validation';
 import * as customController from './controller';
 import { customQuery } from './validation';
 
-const validator = validate.createValidator({});
 const routes = Router();
 
 /**
@@ -27,6 +25,6 @@ const routes = Router();
  *              application/json
  */
 
-routes.get('/', validator.query(customQuery), customController.getCustomListHandler);
+routes.get('/', customQuery, customController.getCustomListHandler);
 
 export default routes;

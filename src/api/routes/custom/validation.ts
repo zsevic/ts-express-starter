@@ -1,5 +1,5 @@
-import Joi from '@hapi/joi';
+import { query } from 'express-validator';
 
-export const customQuery = Joi.object({
-  name: Joi.number().optional(),
-});
+export const customQuery = [
+  query('name').isLength({ min: 5 }).optional(),
+];
