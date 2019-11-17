@@ -1,9 +1,12 @@
-import mongoose, { Schema } from 'mongoose';
+import * as mongoose from 'mongoose';
+import { Custom } from 'domain/entities/Custom';
 
-const CustomSchema = new Schema({
+const CustomSchema = new mongoose.Schema({
   name: {
     type: String,
   },
 });
 
-export default mongoose.model('Custom', CustomSchema);
+type CustomModel = Custom & mongoose.Document;
+
+export default mongoose.model<CustomModel>('Custom', CustomSchema);
