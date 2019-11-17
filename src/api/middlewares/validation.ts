@@ -7,4 +7,4 @@ export const validationMiddleware = (req, res, next) => {
   }
 
   return next();
-}
+};
