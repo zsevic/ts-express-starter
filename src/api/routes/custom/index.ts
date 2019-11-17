@@ -3,7 +3,7 @@ import { validationMiddleware } from 'api/middlewares';
 import * as customController from './controller';
 import { customQuery as customValidation } from './validation';
 
-const routes = Router();
+const customRouter = Router();
 
 /**
  *  @swagger
@@ -26,6 +26,6 @@ const routes = Router();
  *              application/json
  */
 
-routes.get('/', customValidation, validationMiddleware, customController.getCustomListHandler);
+customRouter.get('/', customValidation, validationMiddleware, customController.getCustomListHandler);
 
-export default routes;
+export default customRouter;
