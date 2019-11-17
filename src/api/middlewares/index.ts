@@ -21,5 +21,3 @@ export default (app) => {
     app.use(morgan('dev'));
   }
 };
-
-export { validationMiddleware } from './validation';

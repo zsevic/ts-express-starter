@@ -1,9 +1,10 @@
 import { Router } from 'express';
-import { validationMiddleware } from 'api/middlewares';
+import { createValidator } from 'express-joi-validation';
 import * as customController from './controller';
-import { customQuery as customValidation } from './validation';
+import { customQuery } from './validation';
 
 const customRouter = Router();
+const validator = createValidator();
 
 /**
  *  @swagger
@@ -26,6 +27,6 @@ const customRouter = Router();
  *              application/json
  */
 
-customRouter.get('/', customValidation, validationMiddleware, customController.getCustomListHandler);
+customRouter.get('/', validator.query(customQuery), customController.getCustomListHandler);
 
 export default customRouter;
