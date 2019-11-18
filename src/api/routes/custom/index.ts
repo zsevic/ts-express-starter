@@ -7,26 +7,13 @@ const customRouter = Router();
 const validator = createValidator();
 
 /**
- *  @swagger
- *  tags:
- *    name: Customs
- *    description: Custom management
+ * This function comment is parsed by doctrine
+ * @route GET /custom
+ * @group Custom - Operations about custom
+ * @param {string} name.query - name
+ * @returns {object} 200 - An array of custom info
+ * @returns {Error} 400 - Error validating request query.
  */
-
-/**
- *  @swagger
- *  path:
- *    /api/custom/:
- *      get:
- *        summary: Get custom list
- *        tags: [Customs]
- *        responses:
- *          "200":
- *            description: A custom schema
- *            content:
- *              application/json
- */
-
 customRouter.get('/', validator.query(customQuery), customController.getCustomListHandler);
 
 export default customRouter;

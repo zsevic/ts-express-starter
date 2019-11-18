@@ -1,20 +1,26 @@
-import swaggerJsdoc from 'swagger-jsdoc';
+import constants from 'config/constants';
 import Pack from 'root/package.json';
 
-const swaggerDefinition = {
-  info: {
-    title: `${Pack.name} API documentation`,
-    version: Pack.version,
+export const options = {
+  swaggerDefinition: {
+    info: {
+      title: `${Pack.name} API documentation`,
+      version: Pack.version,
+    },
+    host: `localhost:${constants.PORT}`,
+    basePath: '/api',
+    produces: [
+      'application/json',
+    ],
+    schemes: ['http', 'https'],
+    securityDefinitions: {
+      JWT: {
+        type: 'apiKey',
+        in: 'header',
+        name: 'Authorization',
+      },
+    },
   },
-  host: 'localhost:8080',
-  basePath: '/',
+  basedir: __dirname,
+  files: ['../api/routes/**/*/index.ts'],
 };
-
-const options = {
-  swaggerDefinition,
-  explorer: true,
-
-  apis: ['**/*.ts'],
-};
-
-export const specs = swaggerJsdoc(options);
