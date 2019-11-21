@@ -1,7 +1,8 @@
 # ts-express-starter
+
 > Minimal Express/TypeScript boilerplate
 
-### :wrench: Setup
+### Setup
 
 ```bash
 git clone https://github.com/zsevic/ts-express-starter
@@ -11,25 +12,30 @@ npm i
 npm run dev
 ```
 
-### :construction_worker: Build
+### Build
 
 ```bash
 npm run build
 npm start
 ```
 
-### :rotating_light: Testing
+### Linting
+
+```bash
+npm run lint
+npm run lint:fix
+```
+
+### Testing
 
 ```bash
 npm test
 ```
 
-### :arrow_right: Usage
+### API documentation
 
-```
-GET /
-GET /api/custom
-```
+API documentation is generated using [express-swagger-generator](https://www.npmjs.com/package/express-swagger-generator) plugin at [http://localhost:8080/api-docs](http://localhost:8080/api-docs)
 
-### :package: Technologies used
+### Technologies used
+
 * Node.js, TypeScript, Express, MongoDB

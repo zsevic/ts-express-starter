@@ -7,7 +7,7 @@
     "build": "tsc",
     "dev": "NODE_PATH=./src ts-node-dev src",
     "lint": "eslint src --ext ts",
-    "lint-fix": "eslint src --ext ts --fix",
+    "lint:fix": "eslint src --ext ts --fix",
     "start": "NODE_PATH=./dist/src node dist/src",
     "test": "jest -c test/jest.config.js"
   },
