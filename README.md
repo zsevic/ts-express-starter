@@ -34,7 +34,7 @@ npm test
 
 ### API documentation
 
-API documentation is generated using [express-swagger-generator](https://www.npmjs.com/package/express-swagger-generator) plugin at [http://localhost:8080/api-docs](http://localhost:8080/api-docs)
+API documentation is generated using [express-swagger-generator](https://www.npmjs.com/package/express-swagger-generator) plugin at `/api-docs` endpoint
 
 ### Technologies used
 
