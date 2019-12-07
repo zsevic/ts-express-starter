@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Response } from 'express';
 import { ValidatedRequest } from 'express-joi-validation';
 import { getCustomList } from 'domain/use_cases/getCustomList';
 import { CustomRequestSchema } from './validation';

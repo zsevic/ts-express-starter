@@ -7,6 +7,6 @@ export const customQuery = Joi.object({
 
 export interface CustomRequestSchema extends ValidatedRequestSchema {
   [ContainerTypes.Query]: {
-    name: string
-  }
+    name: string;
+  };
 }

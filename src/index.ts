@@ -10,7 +10,7 @@ const { PORT } = constants;
 const server = http.createServer(app);
 server.listen(PORT);
 
-function onListening() {
+function onListening(): void {
   const addr = server.address();
   const bind = typeof addr === 'string' ? `pipe ${addr}` : `port ${addr.port}`;
   console.log(`Listening on ${bind}`);

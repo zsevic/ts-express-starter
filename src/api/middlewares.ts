@@ -7,7 +7,7 @@ import morgan from 'morgan';
 const isDev = process.env.NODE_ENV === 'development';
 const isProd = process.env.NODE_ENV === 'production';
 
-export default (app) => {
+export default (app): void => {
   if (isProd) {
     app.use(compression());
     app.use(helmet());

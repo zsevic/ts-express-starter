@@ -5,6 +5,7 @@ module.exports = {
   },
   extends: [
     'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
   ],
   globals: {
     Atomics: 'readonly',
@@ -19,14 +20,14 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'class-methods-use-this': 'off',
     'import/prefer-default-export': 'off',
-    'no-unused-vars': 'off',
     'no-console': 'off',
   },
   settings: {
-    "import/resolver": {
+    'import/resolver': {
       node: {
-        extensions: [".js", ".jsx", ".ts", ".tsx"],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         moduleDirectory: ['node_modules', 'src/'],
       },
       typescript: {},
