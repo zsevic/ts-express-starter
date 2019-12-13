@@ -1,3 +1,3 @@
-import { CustomRepository } from 'gateways/mongodb/repositories/CustomRepository';
+import { CustomRepository } from 'gateways/database/repositories/CustomRepository';
 
 export const customRepository = new CustomRepository();
