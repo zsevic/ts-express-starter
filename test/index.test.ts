@@ -32,6 +32,6 @@ describe('API tests', () => {
   it('GET /api/custom', async () => {
     const result = await request.get('/api/custom');
 
-    expect(result.status).toEqual(200);
+    expect(result.status).toEqual(400);
   });
 });

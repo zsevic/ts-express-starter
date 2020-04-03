@@ -5,11 +5,11 @@ import { CustomRequestSchema } from './validation';
 
 export async function getCustomListHandler(req: ValidatedRequest<CustomRequestSchema>,
   res: Response, next: NextFunction): Promise<Response | void> {
-    try {
-      const customList = await getCustomList();
+  try {
+    const customList = await getCustomList();
 
-      res.json(customList);
-    } catch (err) {
-      return next(err);
-    }
+    return res.json(customList);
+  } catch (err) {
+    return next(err);
+  }
 }
