@@ -15,6 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@hapi/boom": "^9.1.0",
     "@hapi/joi": "^16.1.8",
     "body-parser": "^1.18.3",
     "compression": "^1.7.4",

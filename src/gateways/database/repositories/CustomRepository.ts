@@ -1,11 +1,13 @@
 /* eslint-disable class-methods-use-this */
-import { Custom } from 'domain/entities/Custom';
-import CustomModel from 'gateways/database/models/CustomModel';
+import Boom from '@hapi/boom'
+import { Custom } from 'domain/entities/Custom'
+// import CustomModel from 'gateways/database/models/CustomModel'
 
 export class CustomRepository {
   async getCustomList(): Promise<Custom[]> {
-    return CustomModel.find({});
+    throw Boom.badRequest('Error!')
+    // return CustomModel.find({});
   }
 }
 
-export default CustomRepository;
+export default CustomRepository

@@ -1,3 +1,4 @@
+import { errorHandler } from 'api/middlewares/errorHandler';
 import customRoutes from './custom';
 
 export default (app): void => {
@@ -6,4 +7,5 @@ export default (app): void => {
   });
 
   app.use('/api/custom', customRoutes);
+  app.use(errorHandler);
 };
