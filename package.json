@@ -23,7 +23,7 @@
     "dotenv": "^7.0.0",
     "express": "^4.17.1",
     "express-joi-validation": "^4.0.3",
-    "express-swagger-generator": "^1.1.15",
+    "express-oas-generator": "^1.0.23",
     "helmet": "^3.21.2",
     "mongoose": "^5.8.1",
     "morgan": "^1.9.1",

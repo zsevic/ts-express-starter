@@ -14,6 +14,7 @@ try {
 
 mongoose.connection.once('open', (): void => {
   console.log('Connection with database is established');
-}).on('error', (e: Error): Error => {
+}).on('error', (e): Error => {
+  console.log(e.reason);
   throw e;
 });
