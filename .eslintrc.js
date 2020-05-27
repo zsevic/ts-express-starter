@@ -3,10 +3,7 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: [
-    'airbnb-base',
-    'plugin:@typescript-eslint/recommended',
-  ],
+  extends: ['airbnb-base', 'plugin:@typescript-eslint/recommended'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -16,21 +13,18 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module',
   },
-  plugins: [
-    '@typescript-eslint',
-  ],
+  plugins: ['@typescript-eslint'],
   rules: {
-    'class-methods-use-this': 'off',
     'import/prefer-default-export': 'off',
     'no-console': 'off',
     'import/extensions': [
       'error',
       'ignorePackages',
       {
-        'js': 'never',
-        'jsx': 'never',
-        'ts': 'never',
-        'tsx': 'never',
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
       },
     ],
   },
@@ -41,6 +35,6 @@ module.exports = {
         moduleDirectory: ['node_modules', 'src/'],
       },
       typescript: {},
-    }
-  }
+    },
+  },
 };
