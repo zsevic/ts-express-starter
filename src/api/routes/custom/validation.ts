@@ -1,4 +1,4 @@
-import * as Joi from '@hapi/joi';
+import * as Joi from 'joi';
 import { ContainerTypes, ValidatedRequestSchema } from 'express-joi-validation';
 
 export const customQuery = Joi.object({
