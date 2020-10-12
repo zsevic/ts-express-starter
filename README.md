@@ -34,8 +34,8 @@ npm test
 
 ### API documentation
 
-API documentation is generated using [express-swagger-generator](https://www.npmjs.com/package/express-swagger-generator) plugin at `/api-docs` endpoint
+Generated at `/api-docs` endpoint using [express-oas-generator](https://www.npmjs.com/package/express-oas-generator) plugin
 
 ### Technologies used
 
-* Node.js, TypeScript, Express, MongoDB
+- Node.js, TypeScript, Express, MongoDB

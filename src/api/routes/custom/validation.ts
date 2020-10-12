@@ -1,12 +1,7 @@
-import * as Joi from 'joi';
-import { ContainerTypes, ValidatedRequestSchema } from 'express-joi-validation';
+import { celebrate, Joi, Segments } from 'celebrate';
 
-export const customQuery = Joi.object({
-  name: Joi.string().min(5).optional(),
+export default celebrate({
+  [Segments.QUERY]: {
+    name: Joi.string().min(5).optional(),
+  },
 });
-
-export interface CustomRequestSchema extends ValidatedRequestSchema {
-  [ContainerTypes.Query]: {
-    name: string;
-  };
-}

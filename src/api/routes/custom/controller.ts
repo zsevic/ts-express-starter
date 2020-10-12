@@ -1,12 +1,10 @@
-import { Response } from 'express';
-import { ValidatedRequest } from 'express-joi-validation';
+import { Request, Response } from 'express';
 import { getCustomList } from 'domain/use_cases/getCustomList';
-import { CustomRequestSchema } from './validation';
 
 export async function getCustomListHandler(
-  _: ValidatedRequest<CustomRequestSchema>,
+  _: Request,
   res: Response,
-): Promise<Response | void> {
+): Promise<Response> {
   const customList = await getCustomList();
 
   return res.json(customList);

@@ -1,15 +1,13 @@
 import { Router } from 'express';
-import { createValidator } from 'express-joi-validation';
 import { asyncWrap } from 'utils';
 import * as customController from './controller';
-import { customQuery } from './validation';
+import customValidation from './validation';
 
 const customRouter = Router();
-const validator = createValidator();
 
 customRouter.get(
   '/',
-  validator.query(customQuery),
+  customValidation,
   asyncWrap(customController.getCustomListHandler),
 );
 
