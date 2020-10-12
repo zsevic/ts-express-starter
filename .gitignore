@@ -89,3 +89,6 @@ typings/
 
 # build output
 dist
+
+# test output
+globalConfig.json
