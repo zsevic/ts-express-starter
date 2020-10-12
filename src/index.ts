@@ -1,4 +1,3 @@
-import 'dotenv/config';
 import 'tsconfig-paths/register';
 import 'gateways/database/connection';
 import http from 'http';

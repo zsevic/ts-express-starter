@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "tsc",
-    "dev": "NODE_PATH=./src ts-node-dev src",
+    "dev": "NODE_PATH=./src ts-node-dev -r dotenv/config src",
     "lint": "eslint src --ext ts",
     "lint:fix": "npm run lint -- --fix",
     "start": "NODE_PATH=./dist/src node dist/src",
