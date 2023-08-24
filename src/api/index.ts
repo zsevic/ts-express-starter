@@ -2,7 +2,7 @@ import { errors } from 'celebrate';
 import express from 'express';
 import expressOasGenerator from 'express-oas-generator';
 import { isEnv } from 'utils';
-import { errorHandler } from './middlewares/errorHandler';
+import { errorHandler } from './middlewares/error-handler';
 import registerMiddlewares from './middlewares';
 import registerRoutes from './routes';
 
