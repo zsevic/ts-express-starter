@@ -12,7 +12,7 @@ export default (app): void => {
   }
 
   app.use(express.json());
-  app.use(express.urlencoded());
+  app.use(express.urlencoded({ extended: true }));
   app.use(cors());
 
   if (isEnv('development')) {
