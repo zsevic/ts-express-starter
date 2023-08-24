@@ -1,8 +1,13 @@
 import { Boom, isBoom } from '@hapi/boom';
-import { Request, Response } from 'express';
+import { NextFunction, Request, Response } from 'express';
 import { logger } from 'src/utils/logger';
 
-export function errorHandler(err: Boom, _: Request, res: Response): Response {
+export function errorHandler(
+  err: Boom,
+  _: Request,
+  res: Response,
+  next: NextFunction,
+): Response {
   // eslint-disable-line @typescript-eslint/no-unused-vars
   if (isBoom(err)) {
     return res.status(err.output.statusCode).send(err.output.payload.message);
