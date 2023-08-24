@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6-jammy
+    ports:
+      - 27018:27017
+    volumes:
+      - dbdata:/var/lib/mongodb/data
+
+volumes:
+  dbdata:
