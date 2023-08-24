@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 import constants from 'src/config/constants';
+import { logger } from 'src/utils/logger';
 
 mongoose.Promise = global.Promise;
 mongoose.set('strictQuery', false);
@@ -12,9 +13,9 @@ try {
 
 mongoose.connection
   .once('open', (): void => {
-    console.log('Connection with database is established');
+    logger.info('Connection with database is established');
   })
-  .on('error', (e): Error => {
-    console.log(e.reason);
-    throw e;
+  .on('error', (error): Error => {
+    logger.error(error.reason);
+    throw error;
   });

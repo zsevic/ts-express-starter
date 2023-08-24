@@ -27,6 +27,7 @@
     "joi": "^17.9.2",
     "mongoose": "^6.4.6",
     "morgan": "^1.10.0",
+    "pino": "^8.15.0",
     "tsconfig-paths": "^4.2.0"
   },
   "devDependencies": {
