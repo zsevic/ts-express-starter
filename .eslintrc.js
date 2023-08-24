@@ -1,6 +1,7 @@
 module.exports = {
   env: {
     es6: true,
+    jest: true,
     node: true,
   },
   extends: ['airbnb-base', 'plugin:@typescript-eslint/recommended'],
@@ -32,7 +33,7 @@ module.exports = {
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
-        moduleDirectory: ['node_modules', 'src/'],
+        moduleDirectory: ['node_modules', './'],
       },
       typescript: {},
     },

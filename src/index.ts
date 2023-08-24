@@ -1,8 +1,8 @@
 import 'tsconfig-paths/register';
-import 'gateways/database/connection';
+import 'src/gateways/database/connection';
 import http from 'http';
-import app from 'api';
-import constants from 'config/constants';
+import app from 'src/api';
+import constants from 'src/config/constants';
 
 const { PORT } = constants;
 

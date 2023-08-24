@@ -1,5 +1,5 @@
 import * as mongoose from 'mongoose';
-import { Custom } from 'domain/entities/Custom';
+import { Custom } from 'src/domain/entities/custom';
 
 const CustomSchema = new mongoose.Schema({
   name: {

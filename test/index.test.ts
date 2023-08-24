@@ -1,17 +1,16 @@
 import mongoose from 'mongoose';
 import supertest from 'supertest';
-import app from 'api';
-import constants from 'config/constants';
+import app from 'src/api';
+import constants from 'src/config/constants';
 
 const request = supertest(app);
 
+console.log('mongo', constants.MONGODB_URL);
+
 describe('API tests', () => {
   beforeAll(async () => {
-    await mongoose.connect(constants.MONGODB_URL, {
-      useNewUrlParser: true,
-      useCreateIndex: true,
-      useUnifiedTopology: true,
-    }, (err) => {
+    mongoose.set('strictQuery', false);
+    await mongoose.connect(constants.MONGODB_URL, (err) => {
       if (err) {
         console.error(err);
         process.exit(1);
@@ -19,10 +18,10 @@ describe('API tests', () => {
     });
   });
 
-  afterAll( () => {
+  afterAll(() => {
     mongoose.connection.close();
   });
-  
+
   it('GET /', async () => {
     const result = await request.get('/');
 

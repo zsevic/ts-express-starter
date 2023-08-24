@@ -1,12 +1,13 @@
 {
   "compilerOptions": {
-    "baseUrl": "src",
+    "baseUrl": ".",
+    "paths": {
+      "root/*": ["./*"],
+      "src/*": ["./src/*"]
+    },
     "esModuleInterop": true,
     "module": "commonjs",
     "outDir": "dist",
-    "paths": {
-      "root/*": ["../*"]
-    },
     "resolveJsonModule": true,
     "rootDir": ".",
     "sourceMap": true,
