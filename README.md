@@ -9,6 +9,7 @@ git clone https://github.com/zsevic/ts-express-starter
 cd ts-express-starter
 cp .env.sample .env # change values after copying
 npm i
+docker-compose up
 npm run dev
 ```
 
