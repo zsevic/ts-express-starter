@@ -1,6 +1,6 @@
-import bodyParser from 'body-parser';
 import cors from 'cors';
 import compression from 'compression';
+import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { isEnv } from 'src/utils';
@@ -11,8 +11,8 @@ export default (app): void => {
     app.use(helmet());
   }
 
-  app.use(bodyParser.json());
-  app.use(bodyParser.urlencoded({ extended: false }));
+  app.use(express.json());
+  app.use(express.urlencoded());
   app.use(cors());
 
   if (isEnv('development')) {
