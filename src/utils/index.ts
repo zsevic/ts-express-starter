@@ -1,5 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function asyncWrap(fn: (req: Request, res: Response) => Promise<any>) {
   return async function wrappedFn(
     req: Request,
