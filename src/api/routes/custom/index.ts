@@ -8,7 +8,7 @@ const customRouter = Router();
 customRouter.get(
   '/',
   customValidation,
-  asyncWrap(customController.getCustomListHandler)
+  asyncWrap(customController.getCustomListHandler),
 );
 
 export default customRouter;
