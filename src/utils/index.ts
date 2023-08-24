@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from 'express';
 
-export function asyncWrap(fn: (req: Request, res: Response) => Promise<void>) {
+export function asyncWrap(fn: (req: Request, res: Response) => Promise<any>) {
   return async function wrappedFn(
     req: Request,
     res: Response,
