@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Minimal Express/TypeScript starter",
   "main": "index.js",
+  "engines": {
+    "node": "20.x"
+  },
   "scripts": {
     "build": "tsc",
     "dev": "NODE_PATH=./src ts-node-dev -r dotenv/config src",
